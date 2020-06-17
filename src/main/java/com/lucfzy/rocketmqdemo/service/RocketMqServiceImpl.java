@@ -1,11 +1,13 @@
 package com.lucfzy.rocketmqdemo.service;
 
+import org.apache.rocketmq.client.consumer.MessageSelector;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.concurrent.ConcurrentHashMap;
 
 @Service
 public class RocketMqServiceImpl implements RocketMqService {

@@ -5,7 +5,7 @@ rocketmq:
     # 发送同一类消息的设置为同一个group，保证唯一
     groupName: CicadaGroup
     # 服务地址
-    namesrvAddr: 192.168.226.135:9876
+    namesrvAddr: 192.168.226.139:9876
     # 消息最大长度 默认1024*4(4M)
     maxMessageSize: 4096
     # 发送消息超时时间,默认3000
@@ -18,7 +18,7 @@ rocketmq:
     # 官方建议：确保同一组中的每个消费者订阅相同的主题。
     groupName: CicadaGroup
     # 服务地址
-    namesrvAddr: 192.168.226.135:9876
+    namesrvAddr: 192.168.226.139:9876
     # 接收该 Topic 下所有 Tag
     topics: CicadaTopic~*;
     consumeThreadMin: 20

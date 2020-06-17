@@ -1,5 +1,6 @@
 package com.lucfzy.rocketmqdemo.produce;
 
+import com.lucfzy.rocketmqdemo.aop.Action;
 import org.apache.rocketmq.client.exception.MQClientException;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.slf4j.Logger;
@@ -26,6 +27,7 @@ public class ProducerConfig {
     @Value("${rocketmq.producer.retryTimesWhenSendFailed}")
     private Integer retryTimesWhenSendFailed;
 
+    @Action(name = "ddd")
     @Bean
     public DefaultMQProducer getRocketMQProducer() {
         DefaultMQProducer producer;

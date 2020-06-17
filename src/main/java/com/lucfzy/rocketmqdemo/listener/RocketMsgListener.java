@@ -21,6 +21,11 @@ public class RocketMsgListener implements MessageListenerConcurrently {
     @Resource
     private ParamConfigService paramConfigService ;
 
+    @Action(name = "啊啊啊")
+    public void around111(){
+        System.out.println("消息发送成功。。。");
+    }
+
     @Action(name = "注解式拦截的add操作")
     @Override
     public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext context) {
@@ -45,6 +50,7 @@ public class RocketMsgListener implements MessageListenerConcurrently {
                     break;
             }
         }
+        around111();
         // 消息消费成功
         return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
     }
